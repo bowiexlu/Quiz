@@ -112,7 +112,7 @@ function validateUserAnswer() {
         return;
     }
 
-    const userChoice = selectedAnswer.Value;
+    const userChoice = selectedAnswer.value;
 
     // Check if the answer is correct
     if (userChoice == questions[currentQuestionNumber].correct) {
@@ -129,7 +129,7 @@ function validateUserAnswer() {
         currentQuestionNumber++;
         populateQuestionFields();
       } else {
-        endQuiz(); // End the game
+        endQuiz(); 
       }
 }
 
