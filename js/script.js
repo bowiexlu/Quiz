@@ -79,10 +79,7 @@ const feedbackPlayer = document.getElementById("feedback-player");
 // Start quiz function 
 function startQuiz() {
     playerName = document.getElementById("name-input").Value;
-    if (playerName.trim() === "") {
-        alert("Vänligen skriv in ditt namn!");
-        return;
-      }
+    
 
     // Hide and show the game interface
     document.getElementById("game-start").style.display = "none";
