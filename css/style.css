@@ -1,0 +1,12 @@
+#game-in-progress {
+    display: none;
+}
+
+#game-feedback {
+    display: none;
+}
+
+#confetti-canvas {
+	position: absolute;
+	top: 0;
+}
