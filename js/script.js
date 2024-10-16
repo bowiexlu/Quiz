@@ -79,10 +79,6 @@ const feedbackPlayer = document.getElementById("feedback-player");
 // Start quiz function 
 function startQuiz() {
     playerName = document.getElementById("name-input").value;
-<<<<<<< HEAD
-=======
-    
->>>>>>> 4da54c7d1df6e9f8f296f747e478ce96abdc8380
 
     // Hide and show the game interface
     document.getElementById("game-start").style.display = "none";
