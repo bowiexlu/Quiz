@@ -124,8 +124,8 @@ function validateUserAnswer() {
     selectedAnswer.checked = false;
 
     // If this is not the last question
-    if (currentQuestionIndex < questions.length - 1) {
-        currentQuestionIndex++;
+    if (currentQuestionNumber < questions.length - 1) {
+        currentQuestionNumber++;
         populateQuestionFields();
       } else {
         endQuiz(); // End the game
