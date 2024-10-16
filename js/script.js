@@ -95,10 +95,11 @@ function startQuiz() {
 function populateQuestionFields() {
     const currentQuestion = questions[currentQuestionNumber];
 
-    questionField.textContent = currentQuestion.question;
-    answer1Field.textContent = currentQuestion.answers[0];
-    answer1Field.textContent = currentQuestion.answers[1];
-    answer1Field.textContent = currentQuestion.answers[2];
+    document.getElementById("question-field").textContent = currentQuestion.question;
+
+    document.getElementById("answer-1-field").textContent = currentQuestion.answers[0];
+    document.getElementById("answer-2-field").textContent = currentQuestion.answers[1];
+    document.getElementById("answer-3-field").textContent = currentQuestion.answers[2];
 
 }
 
