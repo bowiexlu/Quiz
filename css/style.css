@@ -14,9 +14,10 @@
 #game-in-progress, #game-feedback {
     border: 2px solid black;  
     padding: 20px;  
-    margin: 20px auto;  
-    width: 80%;  
+    margin: 20px auto;   
     box-sizing: border-box;  
+    width: 350px;  
+    height:400px;
 }
 
 
@@ -53,6 +54,7 @@ input, button {
     border: 1px solid #333;  
     background-color: #fff;
     cursor: pointer;  
+    margin: 15px 0;
 }
 
 
