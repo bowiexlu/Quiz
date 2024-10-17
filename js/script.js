@@ -147,7 +147,8 @@ function endQuiz() {
     document.getElementById("game-feedback").style.display = "block";
   
     // Display the score
-    document.getElementById("total-player-points").textContent = `${points}/${totalQuestions}`;
+    document.getElementById("total-player-points").textContent = `${points}/${questions.length}`;
+
   
     // Display the feedback
     const feedback = validateUserScore(points, playerName);
