@@ -96,6 +96,11 @@ function startQuiz() {
 // Populate question fields function 
 function populateQuestionFields() {
     const currentQuestion = questions[currentQuestionNumber];
+    
+    // Update the number of question
+    const totalQuestions = questions.length;
+    document.getElementById("question-number").textContent = `${currentQuestionNumber + 1}/${totalQuestions}`;
+    document.getElementById("question-title").textContent = `Fråga ${currentQuestionNumber + 1}`;
 
     document.getElementById("question-field").textContent = currentQuestion.question;
 
@@ -158,7 +163,7 @@ function endQuiz() {
         // The failure sound will be played
         feedbackPlayer.src = "assets/failure.mp3"; 
     }
-    
+
     feedbackPlayer.play();
   }
   
