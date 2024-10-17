@@ -70,6 +70,8 @@ const questions = [
 // Reference to index
 const playerNameSpan = document.getElementById("player-name");
 const playerPointsSpan = document.getElementById("player-points");
+const questionNumberSpan = document.getElementById("question-number");
+
 const questionField = document.getElementById("question-field");
 const answer1Field = document.getElementById("answer-1-field");
 const answer2Field = document.getElementById("answer-2-field");
