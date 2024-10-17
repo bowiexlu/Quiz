@@ -147,7 +147,7 @@ function endQuiz() {
     document.getElementById("game-feedback").style.display = "block";
   
     // Display the score
-    document.getElementById("total-player-points").textContent = points;
+    document.getElementById("total-player-points").textContent = `${points}/${totalQuestions}`;
   
     // Display the feedback
     const feedback = validateUserScore(points, playerName);
@@ -169,11 +169,10 @@ function endQuiz() {
   
   // Validate user score function 
   function validateUserScore(score) {
-    if (score == 10) return `Grattis ${playerName}, du är slutför frågesporten!`;
-    if (score <= 9) return "Bra jobbat!";
-    if (score <= 6) return "Ganska bra, men du kan bättre!";
     if (score <= 3) return "Inte bra, du behöver studera mer!";
-    
+    if (score <= 6) return "Ganska bra, men du kan bättre!";
+    if (score <= 9) return "Bra jobbat!";
+    if (score == 10) return `Grattis ${playerName}, du är slutför frågesporten!`;
   }
   
   // Restart quiz function 
