@@ -10,3 +10,56 @@
 	position: absolute;
 	top: 0;
 }
+
+#game-in-progress, #game-feedback {
+    border: 2px solid black;  
+    padding: 20px;  
+    margin: 20px auto;  
+    width: 80%;  
+    box-sizing: border-box;  
+}
+
+
+#game-in-progress h3, 
+#game-in-progress p, 
+#game-feedback h2, 
+#game-feedback p {
+    text-align: center;  
+}
+
+
+#game-feedback button, #game-in-progress button {
+    display: block;  
+    margin: 20px auto;  
+}
+
+
+body {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
+    font-family: Arial, sans-serif;  
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;  
+}
+
+
+input, button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;  
+    border: 1px solid #333;  
+    background-color: #fff;
+    cursor: pointer;  
+}
+
+
+.form-check-input {
+    margin-right: 10px;  
+}
+
+.form-check-label {
+    font-size: 18px;  
+}
