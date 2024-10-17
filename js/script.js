@@ -152,7 +152,7 @@ function endQuiz() {
   
     // Display the feedback
     const feedback = validateUserScore(points, playerName);
-    document.querySelector("#game-feedback h2").textContent = feedback;
+    document.querySelector("#game-feedback h3").textContent = feedback;
   
     // If the score is perfect
     if (points === 10) {
