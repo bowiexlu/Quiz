@@ -189,14 +189,16 @@ function endQuiz() {
   
   // Ribbon effect by confetti.js
   function startConfetti() {
-    let confetti = new Confetti('demo');
-
-    confetti.setCount(75);  
-    confetti.setSize(1);   
-    confetti.setPower(25); 
-    confetti.setFade(false); 
-    confetti.destroyTarget(true);
-  }
+    confetti({
+        particleCount: 75,       
+        startVelocity: 25,       
+        spread: 360,             
+        origin: { x: 0.5, y: 0.5 }, 
+        scalar: 1,               
+        colors: ['#bb0000', '#ffffff'], 
+        disableForReducedMotion: true  
+    });
+}
   
   // Event listener
   document.getElementById("start-game-btn").addEventListener("click", startQuiz);
