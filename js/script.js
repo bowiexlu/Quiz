@@ -152,7 +152,7 @@ function endQuiz() {
     document.getElementById("total-player-points").textContent = points;
   
     // Display the feedback
-    const feedback = validateUserScore(points);
+    const feedback = validateUserScore(points, playerName);
     document.querySelector("#game-feedback h2").textContent = feedback;
   
     // If the score is perfect
@@ -160,7 +160,7 @@ function endQuiz() {
         startConfetti();
 
         // The victory sound will be played
-        feedbackPlayer.src = "assets/success.mp3"; 
+        feedbackPlayer.src = "assets/success.mp3";
     } else {
         // The failure sound will be played
         feedbackPlayer.src = "assets/failure.mp3"; 
@@ -171,10 +171,11 @@ function endQuiz() {
   
   // Validate user score function 
   function validateUserScore(score) {
-    if (score <= 3) return "Inte bra, du behöver studera mer!";
-    if (score <= 6) return "Ganska bra, men du kan bättre!";
+    if (score == 10) return `Grattis ${playerName}, du är slutför frågesporten!`;
     if (score <= 9) return "Bra jobbat!";
-    return "Perfekt! Du fick alla rätt!";
+    if (score <= 6) return "Ganska bra, men du kan bättre!";
+    if (score <= 3) return "Inte bra, du behöver studera mer!";
+    
   }
   
   // Restart quiz function 
@@ -188,7 +189,13 @@ function endQuiz() {
   
   // Ribbon effect by confetti.js
   function startConfetti() {
-    confetti.start();
+    let confetti = new Confetti('demo');
+
+    confetti.setCount(75);  
+    confetti.setSize(1);   
+    confetti.setPower(25); 
+    confetti.setFade(false); 
+    confetti.destroyTarget(true);
   }
   
   // Event listener
