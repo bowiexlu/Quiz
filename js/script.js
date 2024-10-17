@@ -86,8 +86,10 @@ function startQuiz() {
 
     // Display the plays name
     playerNameSpan.textContent = playerName;
+    // Display the points
+    playerPointsSpan.textContent = points; 
 
-    // Initialize the question field
+    // Initialize the question 
     populateQuestionFields();
 }
 
@@ -108,11 +110,12 @@ function validateUserAnswer() {
     const selectedAnswer = document.querySelector('input[name="answers"]:checked');
 
     if (!selectedAnswer) {
-        alert("Vänligen välj ett svar!");
+        alert("Please choose an answer!");
         return;
     }
 
-    const userChoice = selectedAnswer.value;
+    
+    const userChoice = parseInt(selectedAnswer.value);
 
     // Check if the answer is correct
     if (userChoice == questions[currentQuestionNumber].correct) {
@@ -147,11 +150,15 @@ function endQuiz() {
   
     // If the score is perfect
     if (points === 10) {
-      startConfetti();
-      feedbackPlayer.src = "assets/success.mp3"; // The victory sound will be played
+        startConfetti();
+
+        // The victory sound will be played
+        feedbackPlayer.src = "assets/success.mp3"; 
     } else {
-      feedbackPlayer.src = "assets/failure.mp3"; // The failure sound will be played
+        // The failure sound will be played
+        feedbackPlayer.src = "assets/failure.mp3"; 
     }
+    
     feedbackPlayer.play();
   }
   
