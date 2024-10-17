@@ -86,8 +86,6 @@ function startQuiz() {
     document.getElementById("game-start").style.display = "none";
     document.getElementById("game-in-progress").style.display = "block";
 
-    // Display the plays name
-    playerNameSpan.textContent = playerName;
     // Display the points
     playerPointsSpan.textContent = points; 
 

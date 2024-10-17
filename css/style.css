@@ -64,7 +64,23 @@ button {
     cursor: pointer;  
     margin: 15px 0;
 }
+.row {
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 10px;  
+    width: 100%;  
+    box-sizing: border-box;  
+}
 
+.col-left {
+    text-align: left;  
+    flex-grow: 1;  
+}
+
+.col-right {
+    text-align: right;  
+}
 
 .form-check-input {
     margin-right: 10px;  
