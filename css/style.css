@@ -20,7 +20,7 @@
     height:400px;
 }
 
-
+#game-start,
 #game-in-progress h3, 
 #game-in-progress p, 
 #game-feedback h2, 
@@ -46,8 +46,16 @@ body {
     background-color: #f9f9f9;  
 }
 
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;  
+    background-color: #fff;
+    cursor: pointer;  
+    margin: 15px 0;
+}
 
-input, button {
+button {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;  
